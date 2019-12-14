@@ -9,8 +9,10 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
+@ApiModel(description="All details about the notes. ")
 @Entity
 @Table(name = "notes")
 @Data

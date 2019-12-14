@@ -16,6 +16,8 @@ import com.prodapt.app.model.dto.ApiResponse;
 import com.prodapt.app.model.prodapt.Notes;
 import com.prodapt.app.service.NoteService;
 
+import io.swagger.annotations.ApiOperation;
+
 /**
  * @author arunkumar.a
  *
@@ -26,19 +28,21 @@ public class NotesController {
 	@Autowired
 	NoteService noteService;
 	
+	@ApiOperation(value = "Find all notes",notes = "Retrieves list of notes from prodapt.notes table")
 	@GetMapping("/v1/getAllNotes")
 	public List<Notes> getAllNotes() {
 		return noteService.getAllNotesFromRepo();
 	}
 	
+	@ApiOperation(value = "Find a note",notes = "Retrieve a note from prodapt.notes table")
 	@GetMapping("/v1/getNote/{id}")
 	public ResponseEntity<?> getNotesId(
 			@PathVariable("id") Integer id) 
 	{
 		return new ResponseEntity<>(noteService.getNotesByIdFromRepo(id),HttpStatus.OK);
 	}
-	
-	
+		
+	@ApiOperation(value = "Save a list of notes",notes = "Saves a list of notes in prodapt.notes table")
 	@PostMapping("/v1/SaveNotes")
 	public ResponseEntity<?> saveNotes(
 			@RequestBody List<Notes> notes) 
@@ -49,6 +53,7 @@ public class NotesController {
 		
 	}
 	
+	@ApiOperation(value = "Deletes a note",notes = "Deletes a note from prodapt.notes table")
 	@DeleteMapping("/v1/deleteNote/{id}")
 	public ResponseEntity<?> deleteNoteById(
 			@PathVariable("id") Integer id) 
