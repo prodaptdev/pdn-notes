@@ -7,8 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
@@ -19,21 +17,20 @@ import lombok.Data;
 public class Notes {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@JsonIgnore
 	@Column(name = "NoteID")
-	private Integer noteID;
+	private Integer id;
 	@Column(name = "NoteTechnology")
-	private String noteTechnology;
+	private String technology;
 	@Column(name = "Note")
 	private String note;
 	@Column(name = "NoteCodeSample")
-	private String noteCodeSample;
+	private String codeSample;
 	@Column(name = "NoteIssue")
-	private String noteIssue;
+	private String issue;
 	@Column(name = "NoteSolution")
-	private String noteSolution;
+	private String solution;
 	@Column(name = "NoteReferenceLinks")
-	private String noteReferenceLinks;
+	private String referenceLinks;
 	@Column(name = "EmpID")
 	private Integer empID;	
 }
