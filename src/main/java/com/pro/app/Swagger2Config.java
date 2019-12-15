@@ -25,7 +25,7 @@ public class Swagger2Config {
 	    		//title
 	    		"PDN-Notes", 
 	    		//description
-	    		"Prodapt Dev Network Notes", 
+	    		"Pro Dev Network Notes", 
 	    		//version
 	    		"v0.0.0", 
 	    		//termsOfServiceUrl
