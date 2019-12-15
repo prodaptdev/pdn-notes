@@ -1,4 +1,4 @@
-package com.prodapt.app.controller;
+package com.pro.app.controller;
 
 import java.util.List;
 
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.prodapt.app.model.dto.ApiResponse;
-import com.prodapt.app.model.prodapt.Notes;
-import com.prodapt.app.service.NoteService;
+import com.pro.app.model.dto.ApiResponse;
+import com.pro.app.model.prodapt.Notes;
+import com.pro.app.service.NoteService;
 
 import io.swagger.annotations.ApiOperation;
 

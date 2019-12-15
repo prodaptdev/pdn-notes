@@ -1,4 +1,4 @@
-package com.prodapt.app.model.dto;
+package com.pro.app.model.dto;
 
 import java.util.Date;
 

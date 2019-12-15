@@ -1,4 +1,4 @@
-package com.prodapt.app.exception;
+package com.pro.app.exception;
 
 import java.util.Date;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 
-import com.prodapt.app.model.dto.ApiResponse;
+import com.pro.app.model.dto.ApiResponse;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {

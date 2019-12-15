@@ -1,4 +1,4 @@
-package com.prodapt.app.exception;
+package com.pro.app.exception;
 
 public class NoteNotFoundException extends RuntimeException {
 

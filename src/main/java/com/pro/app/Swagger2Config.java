@@ -1,4 +1,4 @@
-package com.prodapt.app;
+package com.pro.app;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -48,7 +48,7 @@ public class Swagger2Config {
 		
 		return new Docket(DocumentationType.SWAGGER_2)
 				.groupName("PDN-Notes").select()
-				.apis(RequestHandlerSelectors.basePackage("com.prodapt.app.controller"))
+				.apis(RequestHandlerSelectors.basePackage("com.pro.app.controller"))
 				.paths(PathSelectors.any())
 				.build()
 				.apiInfo(apiInfo())

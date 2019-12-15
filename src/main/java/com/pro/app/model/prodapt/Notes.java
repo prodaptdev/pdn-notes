@@ -1,4 +1,4 @@
-package com.prodapt.app.model.prodapt;
+package com.pro.app.model.prodapt;
 
 import java.sql.Timestamp;
 

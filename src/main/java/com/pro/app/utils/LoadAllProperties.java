@@ -1,4 +1,4 @@
-package com.prodapt.app.utils;
+package com.pro.app.utils;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

@@ -1,4 +1,4 @@
-package com.prodapt.app.service;
+package com.pro.app.service;
 
 import java.util.Date;
 import java.util.List;
@@ -10,10 +10,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import com.prodapt.app.exception.NoteNotFoundException;
-import com.prodapt.app.model.dto.ApiResponse;
-import com.prodapt.app.model.prodapt.Notes;
-import com.prodapt.app.repository.NotesRepository;
+import com.pro.app.exception.NoteNotFoundException;
+import com.pro.app.model.dto.ApiResponse;
+import com.pro.app.model.prodapt.Notes;
+import com.pro.app.repository.NotesRepository;
 
 @Service
 public class NoteService {

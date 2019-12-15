@@ -8,7 +8,7 @@
 		<version>2.2.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.prodapt</groupId>
+	<groupId>com.pro</groupId>
 	<artifactId>pdn-notes</artifactId>
 	<version>0.0.1-app</version>
 	<name>pdn-notes</name>
