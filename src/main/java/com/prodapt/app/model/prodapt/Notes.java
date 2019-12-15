@@ -1,11 +1,16 @@
 package com.prodapt.app.model.prodapt;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.GenerationTime;
 
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
@@ -17,20 +22,25 @@ import lombok.Data;
 public class Notes {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "NoteID")
+	@Column(name = "ID")
 	private Integer id;
-	@Column(name = "NoteTechnology")
+	@Column(name = "Technology")
 	private String technology;
 	@Column(name = "Note")
 	private String note;
-	@Column(name = "NoteCodeSample")
+	@Column(name = "CodeSample")
 	private String codeSample;
-	@Column(name = "NoteIssue")
+	@Column(name = "Issue")
 	private String issue;
-	@Column(name = "NoteSolution")
+	@Column(name = "Solution")
 	private String solution;
-	@Column(name = "NoteReferenceLinks")
+	@Column(name = "ReferenceLinks")
 	private String referenceLinks;
-	@Column(name = "EmpID")
-	private Integer empID;	
+	@Column(name = "UserID")
+	private String userID;	
+	@Column(name = "LastModifiedUser")
+	private String lastModifiedUser;
+	@Generated(GenerationTime.ALWAYS)
+	@Column(name = "LastModifiedDate")
+	private Timestamp lastModifiedDate;	
 }

@@ -2,6 +2,7 @@ package com.prodapt.app.exception;
 
 import java.util.Date;
 
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,6 +30,12 @@ public class GlobalExceptionHandler {
 	 
 	 @ExceptionHandler(HttpMessageNotReadableException.class)
 	 public final ResponseEntity<ApiResponse> handleHttpMessageNotReadableException(HttpMessageNotReadableException ex, WebRequest request) {		 
+		 ApiResponse apiErrorResponse = new ApiResponse(ex.getMessage(),new Date(),HttpStatus.BAD_REQUEST);
+		 return new ResponseEntity<>(apiErrorResponse, HttpStatus.BAD_REQUEST);
+	 }
+	 
+	 @ExceptionHandler(DataIntegrityViolationException.class)
+	 public final ResponseEntity<ApiResponse> handleDataIntegrityViolationException(DataIntegrityViolationException ex, WebRequest request) {		 
 		 ApiResponse apiErrorResponse = new ApiResponse(ex.getMessage(),new Date(),HttpStatus.BAD_REQUEST);
 		 return new ResponseEntity<>(apiErrorResponse, HttpStatus.BAD_REQUEST);
 	 }
